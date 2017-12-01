@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="750.0" spacing="20.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ShowProductsViewController">
+   <children>
+      <Label alignment="CENTER" text="Super-amazing (smart) TV Emporium">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TableView fx:id="productsTable" prefHeight="267.0" prefWidth="750.0">
+        <columns>
+          <TableColumn fx:id="brandColumn" prefWidth="87.20055437088013" text="Brand" />
+          <TableColumn fx:id="modelColumn" prefWidth="84.79942321777344" text="Model" />
+            <TableColumn fx:id="screenSizeColumn" prefWidth="81.92630004882812" text="Screen Size" />
+            <TableColumn fx:id="resolutionColumn" prefWidth="86.8199462890625" text="Resolution" />
+            <TableColumn fx:id="panelTypeColumn" prefWidth="88.02056884765625" text="Panel Type" />
+            <TableColumn fx:id="osColumn" prefWidth="46.182861328125" text="OS" />
+            <TableColumn fx:id="featuresColumn" prefWidth="76.2919921875" text="Features" />
+            <TableColumn fx:id="priceColumn" prefWidth="80.21832275390625" text="Price" />
+            <TableColumn fx:id="smartFeaturesColumn" prefWidth="120.7816162109375" text="Smart Features" />
+        </columns>
+      </TableView>
+      <GridPane>
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="currentInventoryPriceLabel" text="Label" />
+            <Label fx:id="tvsInStock" text="Label" GridPane.columnIndex="1" />
+         </children>
+         <padding>
+            <Insets left="20.0" right="20.0" />
+         </padding>
+      </GridPane>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="50.0">
+         <children>
+            <Button fx:id="addNewProductButton" mnemonicParsing="false" onAction="#addNewProductButtonPushed" text="Add New Item" />
+            <Button fx:id="sellProductButton" mnemonicParsing="false" text="Sell Item" />
+         </children>
+      </HBox>
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+   <padding>
+      <Insets top="20.0" />
+   </padding>
+</VBox>
